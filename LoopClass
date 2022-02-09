@@ -1,0 +1,23 @@
+package com.OpenBootcamp;
+
+public class LoopClass {
+    public static void main(String[] args) {
+
+        String[] riskInvestors = new String[]{"Ycombinator", "Platanus Ventures",
+                "Nazca Capital", "Adler", "Techstars"};
+
+        int[] investments = new int[]{1000000, 2000000, 300000, 400000, 500000};
+
+        for (String investors : riskInvestors
+        ) {
+
+            System.out.println(investors);
+
+        }
+
+        for (int inv : investments) {
+            System.out.println(inv);
+        }
+
+    }
+}
