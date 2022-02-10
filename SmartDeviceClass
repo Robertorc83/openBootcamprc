@@ -1,0 +1,119 @@
+package com.OpenBootcamp;
+
+public class SmartDevice {
+
+    boolean InternetConnection;
+    String name;
+    int ramMemory;
+    int precio;
+    int DuracionBateriaHr;
+
+    public SmartDevice (){
+
+    }
+
+    @Override
+    public String toString() {
+        return "SmartDevice{" +
+                "InternetConnection=" + InternetConnection +
+                ", name='" + name + '\'' +
+                ", ramMemory=" + ramMemory +
+                ", precio=" + precio +
+                ", DuracionBateriaHr=" + DuracionBateriaHr +
+                '}';
+    }
+
+    public SmartDevice(String name, int ramMemory, int precio, int DuracionBateriaHr){
+        this.name =name;
+        this.ramMemory =ramMemory;
+        this.precio =precio;
+        this.DuracionBateriaHr =DuracionBateriaHr;
+
+
+
+    }
+
+    public static void main(String[] args) {
+
+        SmartDevice IoTrefrigerator = new SmartDevice("Refri3000", 1,5000, 4);
+
+
+        System.out.println(IoTrefrigerator);
+
+        SmartPhone Huaweip90 = new SmartPhone("Huaweip90", 20,3000,24,20,"Android");
+
+        System.out.println(Huaweip90);
+
+        SmartWatch aplewatchb = new SmartWatch("aplewatchb", 2,300,4,"Deportivo","LOED");
+        System.out.println(aplewatchb);
+    }
+
+    public static class SmartPhone extends SmartDevice {
+
+        int cameraMP;
+        String SO;
+
+        @Override
+        public String toString() {
+            return "SmartPhone{" +
+                    "InternetConnection=" + InternetConnection +
+                    ", name='" + name + '\'' +
+                    ", ramMemory=" + ramMemory +
+                    ", precio=" + precio +
+                    ", DuracionBateriaHr=" + DuracionBateriaHr +
+                    ", cameraMP=" + cameraMP +
+                    ", SO='" + SO + '\'' +
+                    '}';
+        }
+
+        public SmartPhone(){
+
+        }
+
+        public SmartPhone(String name, int ramMemory, int precio, int DuracionBateriaHr, int cameraMP, String SO){
+            this.name = name;
+            this.ramMemory = ramMemory;
+            this.precio = precio;
+            this.DuracionBateriaHr =DuracionBateriaHr;
+            this.cameraMP = cameraMP;
+            this.SO = SO;
+        }
+
+    }
+
+    public static class SmartWatch extends SmartDevice{
+
+    String Modelo;
+    String Pantalla;
+
+        @Override
+        public String toString() {
+            return "SmartWatch{" +
+                    "InternetConnection=" + InternetConnection +
+                    ", name='" + name + '\'' +
+                    ", ramMemory=" + ramMemory +
+                    ", precio=" + precio +
+                    ", DuracionBateriaHr=" + DuracionBateriaHr +
+                    ", Modelo='" + Modelo + '\'' +
+                    ", Pantalla='" + Pantalla + '\'' +
+                    '}';
+        }
+
+        public SmartWatch(){
+    }
+
+        public SmartWatch(String name, int ramMemory, int precio, int DuracionBateriaHr, String Modelo, String Pantalla){
+            this.name = name;
+            this.ramMemory = ramMemory;
+            this.precio = precio;
+            this.DuracionBateriaHr =DuracionBateriaHr;
+            this.Modelo = Modelo;
+            this.Pantalla = Pantalla;
+
+        }
+
+
+    }
+
+}
+
